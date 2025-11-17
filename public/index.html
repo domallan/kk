@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kris Kringle Randomiser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎄 Kris Kringle Randomiser</h1>
+            <p class="subtitle">Manage your Secret Santa assignments</p>
+        </header>
+
+        <main>
+            <!-- Users Section -->
+            <section class="card">
+                <h2>Users</h2>
+                <div class="user-form">
+                    <input type="text" id="userName" placeholder="Enter name" />
+                    <input type="tel" id="userPhone" placeholder="Phone (e.g. +1234567890)" />
+                    <select id="partnerSelect">
+                        <option value="">No partner</option>
+                    </select>
+                    <button id="userSubmitBtn" onclick="addUser()">Add User</button>
+                    <button id="userCancelBtn" onclick="cancelEdit()" style="display: none;">Cancel</button>
+                </div>
+                <div id="usersList" class="users-list"></div>
+            </section>
+
+            <!-- Assignments Section -->
+            <section class="card">
+                <h2>Assignments</h2>
+                <div class="assignment-controls">
+                    <input type="number" id="yearInput" placeholder="Year" value="" />
+                    <button onclick="generateAssignments()">Generate Assignments</button>
+                    <button onclick="loadAssignments()">Load Assignments</button>
+                    <button onclick="sendAllSMS()" class="btn-sms">📱 Send SMS to All</button>
+                </div>
+                <div id="assignmentsList" class="assignments-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+{
+  "host": "localhost",
+  "port": 5432,
+  "user": "kk_user",
+  "password": "kk_password",
+  "database": "kk_db"
+}
+

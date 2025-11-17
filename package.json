@@ -4,6 +4,10 @@
   "description": "Kris Kringle picker",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "migrate": "node scripts/migrate.js",
+    "migrate:phone": "node scripts/migrate.js migration_add_phone.sql",
+    "migrate:sms": "node scripts/migrate.js migration_add_sms_tracking.sql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +26,11 @@
   },
   "homepage": "https://github.com/domallan/kk#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.16.4",
     "jasmine": "^3.4.0",
     "jquery": "^3.4.0",
-    "mysql": "^2.17.1"
+    "pg": "^8.11.3",
+    "twilio": "^4.19.0"
   }
 }
